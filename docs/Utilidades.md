@@ -5,13 +5,15 @@
 
 <p>&nbsp;</p>
 
-<b>Diseño de PCB</b>
+<b>Diseño de esquemas y PCBs</b>
 
 <p>En oportunidades, tendremos necesidad de diseñar nuestro propio PCB para dar una mejor presentación estética o un formato más compacto al proyecto. Existen diversas herramientas desde muy simples a altamente profesionales para este cometido, entre las que podemos sugerir:</p>
 
-* <b>Fritzing</b>: es un software open source muy cómodo de utilizar, que si bien no cuenta con todas las variantes y características profesionales, es igualmente muy completo. Se descarga desde la página oficial <a href="http://fritzing.org" target="_blank">fritzing.org</a>.
+* <b>Fritzing</b>: es un software open source muy cómodo de utilizar, que si bien no cuenta con todas las variantes y características profesionales, es igualmente muy útil y accesible para comenzar. Se descarga desde la página oficial <a href="http://fritzing.org" target="_blank">fritzing.org</a>.
 
 * <b>KiCAD</b>: es otra alternativa open source, muy completa, que incluye además alternativas de simulación. Posiblemente no cuente con la interfaz más intuitiva del mercado, pero de cualquier manera es de uso muy accesible, se encuentra gran cantidad de documentación online y se puede utilizar sin cargo en todo tipo de proyectos. Se puede descargar desde <a href="http://kicad-pcb.org/" target="_blank">kicad-pcb.org/</a>.
+
+* <b>DIPTrace</b>: es una variante realmente completa, con un entorno de trabajo muy rápido y buenas características para el desarrollo de placas tanto hobbystas como profesionales. No se trata de un proyecto opensource, pero entre sus opciones de descarga se puede obtener un instalador completamente funcional que se puede utilizar sin cargo para uso personal, hasta un máximo de 300 conexiones de pines y 2 capas. Se descarga desde <a href="https://diptrace.com/" target="_blank">DIPTrace.com</a>
 
 * <b>CircuitMaker</b>: es una herramienta de diseño gratuita, provista por la reconocida empresa <a href="https://altium.com" target="_blank">Altium</a>. Esta empresa brinda toda una familia de productos para el desarrollo profesional de circuitos, en una variedad de costos, pero en varios casos incluye la posibilidad de pruebas sin cargo, además del ya mencionado CircuitMaker que puede utilizarse gratuitamente. El enlace de descarga se encuentra en su página oficial: <a href="https://circuitmaker.com" target="_blank">circuitmaker.com</a>.
 
