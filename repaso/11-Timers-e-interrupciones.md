@@ -213,7 +213,7 @@ Vamos a explicar un poco más los eventos disponibles para ser capturados en int
 >
 > se traduce como "habilitar interrupción en el GPIO17, para ejecutar la función <i>procesar()</i> tan pronto como el estado del pin comience a caer de 1 a 0" (en este caso el sensor en el pin está operando con lógica negada).
 
-> <b>Importante!: al diseñar una función ISR, tengamos en mente que la misma debe consumir el menor tiempo de ejecución posible, por lo general lo vamos a utilizar para cambiar de estado a variables booleanas, incrementar contadores y demás, luego en el flujo principal realizaremos otras tareas debido a esos cambios. NO es aconsejable colocar dentro, operaciones que consuman tiempo alto como comunicación serial o I2C por ejemplo, mientras más concisa, mejor.
+> <b>Importante!: al diseñar una función ISR, tengamos en mente que la misma debe consumir el menor tiempo de ejecución posible, por lo general lo vamos a utilizar para cambiar de estado a variables booleanas, incrementar contadores y demás, luego en el flujo principal realizaremos otras tareas debido a esos cambios. NO es aconsejable colocar dentro, operaciones que consuman tiempo alto como comunicación serial o I2C por ejemplo, mientras más concisa, mejor</b>.
 
 <p>&nbsp;</p>
 
