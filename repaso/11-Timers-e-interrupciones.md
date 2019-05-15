@@ -146,7 +146,7 @@ void loop() {
 
 Mediante <i>Ticker</i>, podemos definir la cantidad de objetos de control que necesitemos, y a través de los métodos <i>attach</i> o <i>attach_ms</i>, indicar cada cuántos segundos o milisegundos debemos ejecutar el contenido de una determinada función. Como puede verse, el <i>loop()</i> standard queda vacío, es el propio sistema esp_timer interno del ESP32 el que mantiene las tareas en operación. Alternativamente, si queremos ejecutar una determinada tarea solo UNA vez, utilizamos los métodos <i>once</i> o <i>once_ms</i> en la asignación del setup().
 
-> <b>Importante!: si bien existe también una librería Ticker para Arduinos convencionales, se trata de proyectos diferentes, la que vemos es una implementación específica para micros ESP32.
+> <b>Importante!: si bien existe también una librería Ticker para Arduinos convencionales, se trata de proyectos diferentes, la que vemos es una implementación específica para micros ESP32</b>.
 
 <p>&nbsp;</p>
 
