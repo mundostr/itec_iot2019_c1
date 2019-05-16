@@ -6,6 +6,8 @@
 
 const byte LED = 2;
 const byte SENSOR = 17;
+const int FREC_LED = 1000;
+const int FREC_SENSOR = 100;
 
 // Generamos el objeto para manejar cada tarea
 Ticker ctrlLed;
@@ -24,8 +26,8 @@ void setup() {
   // Asignamos la tarea, indicando frecuencia y función que debe ejecutar
   // Podemos utilizar attach() con frecuencia en segs directamente en lugar de ms
   // y los métodos once_ms() / once() si queremos ejecutar la tarea solo una vez.
-  ctrlLed.attach_ms(100, leerSensor);
-  ctrlLed.attach_ms(1000, alternarLed);
+  ctrlSensor.attach_ms(FREC_SENSOR, leerSensor);
+  ctrlLed.attach_ms(FREC_LED, alternarLed);
 }
 
 void loop() {
