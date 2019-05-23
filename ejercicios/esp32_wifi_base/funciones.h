@@ -1,5 +1,5 @@
 const char* REDWF = "APIOT";
-const char* CLAVE = "itec2019";
+const char* CLAVE = "arduino2019";
 
 String verTipoEnc(wifi_auth_mode_t tipo) {
   switch (tipo) {
