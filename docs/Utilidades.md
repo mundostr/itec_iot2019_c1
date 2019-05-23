@@ -24,3 +24,9 @@
 <p>Sin dudas es de gran utilidad el poder diagramar digitalmente las conexiones de un circuito, y probar su comportamiento antes de armar su versión física definitiva, más aún cuando estamos en un proceso de aprendizaje en el cual seguramente cometeremos errores que pueden derivar en componentes inutilizados. Existen distintos tipos de simuladores, desde el super conocido y comercial <a href="https://www.labcenter.com" target="_blank">Proteus</a>, al propio KiCAD mencionado líneas arriba, que puede usarse de manera gratuita.</p>
 
 * <b>TinkerCAD</b>: tratando siempre de aprovechar las opciones open source o gratuitas, TinkerCAD es sin dudas una excelente herramienta, provista por la conocida empresa Autodesk. Se trata de un entorno online en el cual se pueden simular distintos tipos de circuitos, incluyendo la posibilidad de cargar código Arduino, utilizando el tradicional board Arduino UNO por ejemplo. No se trata de una herramienta profesional, con todas las alternativas de simulación provistas por otras, pero sí es muy sencilla de utilizar, opera 100% online y resulta muy cómoda en el aprendizaje. Solo es necesario crearse una cuenta gratuita en Autodesk para comenzar a usarla, se puede realizar desde la página inicial de <a href="https://tinkercad.com" target="_blank">TinkerCAD</a> y luego dirigirse a la sección de circuitos.
+
+<p>&nbsp;</p>
+
+<b>Calculadoras online</b>
+
+<p><b>DigiKey</b> para divisores de voltaje: <a href="https://www.digikey.com/es/resources/conversion-calculators/conversion-calculator-voltage-divider" target="_blank">https://www.digikey.com/es/resources/conversion-calculators/conversion-calculator-voltage-divider</a></p>
