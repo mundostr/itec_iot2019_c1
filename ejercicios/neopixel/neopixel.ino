@@ -9,7 +9,7 @@ const byte MULTILED = 16;
 // Enum nos permite definir un tipo de variable personalizado ("colores" en este caso)
 // que acepta solo un paquete de constantes para identificar distintos estados.
 // Es muy útil en la escritura de switch cases por ejemplo.
-enum colores { ROJO, VERDE, AZUL, AMARILLO, MAGENTA };
+enum colores { ROJO, VERDE, AZUL, AMARILLO, MAGENTA, APAGADO };
 
 // Definimos un objeto "ledM" de tipo Adafruit_NeoPixel
 // NEO_GRB y NEO_KHZ800 son constantes ya especificadas en la librería, que dependen
@@ -28,6 +28,8 @@ void loop() {
   cambiarColorLedM(0, VERDE);
   delay(3000);
   cambiarColorLedM(0, AZUL);
+  delay(3000);
+  cambiarColorLedM(0, APAGADO);
   delay(3000);
 }
 
@@ -55,6 +57,10 @@ void cambiarColorLedM(byte led, colores color) {
 
     case AZUL:
       ledM.setPixelColor(led, 0, 0, 255);
+      break;
+
+    case APAGADO:
+      ledM.setPixelColor(led, 0);
       break;
   }
   ledM.show();
