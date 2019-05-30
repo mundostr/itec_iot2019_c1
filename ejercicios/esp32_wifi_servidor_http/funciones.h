@@ -50,8 +50,9 @@ void cambiarColorLedM(byte led, colores color) {
 
 void activarServidor() {
   servidor.on("/", HTTP_GET, [](AsyncWebServerRequest * request) {
-    String respuesta = "Servidor activo en <b>" + String(WiFi.macAddress()) + "</b>";
-    request->send(200, "text/html", respuesta);
+    cadena = "Servidor activo en <b>" + String(WiFi.macAddress()) + "</b>";
+    request->send(200, "text/html", cadena);
+    // request->send(SPIFFS, "/srvweb01_index.html", "text/html");
   });
 
   servidor.on("/rojo", HTTP_GET, [](AsyncWebServerRequest * request) {
@@ -70,6 +71,10 @@ void activarServidor() {
   });
 
   servidor.on("/ledm", HTTP_GET, [](AsyncWebServerRequest * request) {
+    // Ejemplo de punto de acceso con uso de argumentos pasados por URL
+    // De esta manera podemos reaprovechar un mismo punto para ejecutar
+    // distintas acciones de caracter similar, como por ejemplo encender
+    // o apagar diferentes relays.
     if (request->args() > 0) {
       byte indice;
       int argumento = request->arg(indice = 0).toInt();
@@ -90,8 +95,10 @@ void activarServidor() {
   });
 
   servidor.on("/dhtt", HTTP_GET, [](AsyncWebServerRequest * request) {
-    cadena = "Temperatura: " + String(leerDHT(0));
-    request->send(200, "text/plain", cadena);
+    // Ejemplo de punto de acceso para lectura de sensor bajo demanda,
+    // en este caso utilizando una llamada a una función que realiza la
+    // lectura y devuelve el dato
+    request->send(200, "text/plain", "T: " + String(leerDHT(0)));
   });
 
   servidor.on("/dhth", HTTP_GET, [](AsyncWebServerRequest * request) {
