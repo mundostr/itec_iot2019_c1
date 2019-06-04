@@ -52,6 +52,18 @@ void leerArchivo(char *arc) {
   archivo.close();
 }
 
+boolean guardarArchivo(char *arc, char *contenido) {
+  bool todoOk;
+  File archivo = SPIFFS.open(arc, "w");
+  if (archivo.print(contenido)) {
+    todoOk = true;
+  } else {
+    todoOk = false;
+  }
+  archivo.close();
+  return todoOk;
+}
+
 void setup() {
   Serial.begin(115200);
 
@@ -62,7 +74,14 @@ void setup() {
   Serial.println("SPIFFS montado (" + String(SPIFFS.usedBytes()) + " bytes usados)");
 
   listarDir("/");
-  // leerArchivo("/menu.html");
+  
+  // leerArchivo("/prueba.txt");
+  
+  //  if (guardarArchivo("/prueba.txt", "Contenido de prueba")) {
+  //    Serial.println("Archivo actualizado");
+  //  } else {
+  //    Serial.println("ERROR al actualizar el archivo");
+  //  }
 }
 
 void loop() {
