@@ -12,7 +12,7 @@ void setup() {
   conectarWiFi();
   // http://mundostreaming.tv/itec/arduino/clima.php
   // http://api.openweathermap.org/data/2.5/find?q=rafaela&mode=json&units=metric&lang=sp&APPID=bbbe84df6ab458740a22a2e0a1eb7663
-  enviarPeticion("http://mundostreaming.tv/itec/arduino/clima.php");
+  enviarPeticion("http://mundostreaming.tv/itec/iot/clima.php");
 }
 
 void loop() {
