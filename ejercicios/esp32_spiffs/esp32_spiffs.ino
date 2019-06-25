@@ -64,10 +64,22 @@ boolean guardarArchivo(char *arc, char *contenido) {
   return todoOk;
 }
 
+boolean actualizarArchivo(char *arc, char *contenido) {
+  bool todoOk;
+  File archivo = SPIFFS.open(arc, "a");
+  if (archivo.print(contenido)) {
+    todoOk = true;
+  } else {
+    todoOk = false;
+  }
+  archivo.close();
+  return todoOk;
+}
+
 void setup() {
   Serial.begin(115200);
 
-  if (!SPIFFS.begin(true)) {
+  if (!SPIFFS.begin(false)) { // true para forzar formato si falla el montaje
     Serial.println("ERROR al montar SPIFFS");
     return;
   }
