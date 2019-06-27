@@ -18,7 +18,8 @@
 #include <SPIFFS.h>
 
 void listarDir(char *dir) {
-  static int archivos = 0;
+  static int archivos;
+  archivos = 0;
 
   File raiz = SPIFFS.open(dir);
   File archivo = raiz.openNextFile();
