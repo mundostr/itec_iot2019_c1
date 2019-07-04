@@ -65,7 +65,7 @@ boolean guardarArchivo(char *arc, char *contenido) {
   return todoOk;
 }
 
-boolean actualizarArchivo(char *arc, char *contenido) {
+boolean actualizarArchivo(char *arc, String contenido) {
   bool todoOk;
   File archivo = SPIFFS.open(arc, "a");
   if (archivo.print(contenido)) {
@@ -87,9 +87,12 @@ void setup() {
   Serial.println("SPIFFS montado (" + String(SPIFFS.usedBytes()) + " bytes usados)");
 
   listarDir("/");
-  
+
+  // char *cadenaCsv = "{ \"valor\": \"28\" }";
+  String cadenaCsv2 = "{ \"valor\": \"28\" }";
+  actualizarArchivo("/prueba1.csv", cadenaCsv2);
   // leerArchivo("/prueba.txt");
-  
+
   //  if (guardarArchivo("/prueba.txt", "Contenido de prueba")) {
   //    Serial.println("Archivo actualizado");
   //  } else {

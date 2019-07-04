@@ -59,7 +59,7 @@ void conectarMqtt() {
 
 void enviarMqtt() {
   String cadena = "{\"timestamp\": " + String(millis()) + ", \"valor\": 23 }";
-  mqtt.publish("cperren/topico03", cadena.c_str(), false); // true / false retained
+  mqtt.publish("cperren/topico03", cadena.c_str(), false); // true / false retain
   Serial.println("Mensaje enviado (" + cadena + ")");
 }
 

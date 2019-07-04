@@ -4,8 +4,8 @@
 const byte PIN_LED = 2;
 const byte PIN_SENSOR = 23;
 
-const char *REDWF = "APIOT";
-const char *CLAVEWF = "arduino2019";
+const char *REDWF = "itec";
+const char *CLAVEWF = "itec2019";
 const char* SERVIDORMQTT = "broker.hivemq.com";
 const int PUERTOMQTT = 1883;
 const char* USUARIOMQTT = "";
@@ -43,8 +43,9 @@ void conectarWiFi() {
 void conectarMqtt() {
   mqtt.setServer(SERVIDORMQTT, PUERTOMQTT);
 
+  long nroRandom = random(10000);
   while (!mqtt.connected()) {
-    if (mqtt.connect("clienteESP32", USUARIOMQTT, CLAVEMQTT)) {
+    if (mqtt.connect("itec_cperren", USUARIOMQTT, CLAVEMQTT)) {
       digitalWrite(PIN_LED, HIGH);
       Serial.println("Mqtt conectado");
     } else {
@@ -57,6 +58,6 @@ void conectarMqtt() {
 
 void enviarMqtt() {
   String cadena = "{\"timestamp\": " + String(millis()) + ", \"valor\": 23 }";
-  mqtt.publish("cperren/topico03", cadena.c_str(), true);
-  Serial.println("Mensaje enviado");
+  mqtt.publish("cperren/topico03", cadena.c_str(), false); // true / false retained
+  Serial.println("Mensaje enviado (" + cadena + ")");
 }
