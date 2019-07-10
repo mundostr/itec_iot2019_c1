@@ -30,3 +30,9 @@
 <b>Calculadoras online</b>
 
 <p><b>DigiKey</b> para divisores de voltaje: <a href="https://www.digikey.com/es/resources/conversion-calculators/conversion-calculator-voltage-divider" target="_blank">https://www.digikey.com/es/resources/conversion-calculators/conversion-calculator-voltage-divider</a></p>
+
+<p>&nbsp;</p>
+
+<b>Componentes reutilizables para diseños</b>
+
+<p><b>ComponentSearchEngine.com</b>: <a href="https://componentsearchengine.com" target="_blank">https://componentsearchengine.com</a></p>
