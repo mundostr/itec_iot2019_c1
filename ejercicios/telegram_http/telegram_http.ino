@@ -9,8 +9,8 @@
 const boolean DEBUG = true;
 const char *WIFI_SSID = "APIOT";
 const char *WIFI_CLAVE = "arduino2019";
-// const String SRV_API_TELEGRAM = "http://mstr16.mundostreaming.tv:8095/iot/ntelegram";
-const String SRV_API_MYSQL = "http://mstr16.mundostreaming.tv:8095/iot/nmysql";
+const String SRV_API_TELEGRAM = "http://mstr16.mundostreaming.tv:8095/iot/ntelegram";
+// const String SRV_API_MYSQL = "http://mstr16.mundostreaming.tv:8095/iot/nmysql";
 float max_temperatura = 28.00;
 
 void consola(String mensaje, boolean salto = true) {
@@ -66,8 +66,8 @@ void setup() {
   // mensaje.concat(max_temperatura);
   // mensaje.concat(" C\" }");
   String mensaje="{ \"lectura\": \"" + String(millis()) + "\"}";
-  // notificar(SRV_API_TELEGRAM, mensaje);
-  notificar(SRV_API_MYSQL, mensaje);
+  notificar(SRV_API_TELEGRAM, mensaje);
+  // notificar(SRV_API_MYSQL, mensaje);
 }
 
 void loop() {
